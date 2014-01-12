@@ -29,6 +29,7 @@ receivers = (
 
 infile = open('message.txt')
 content = infile.read()
+infile.close()
 message = Text(content, _charset = 'utf-8')
 message['Subject'] = Header(classid + '通知', 'utf-8')
 
