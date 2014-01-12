@@ -37,6 +37,7 @@ def status(sender, passwd):
     rtk = re.search("get_check_x:'(\w+)'", html).group(1)
     infile = open('message.txt')
     message = infile.read()
+    infile.close()
     data = {"content": message, "hostid": uid, "requestToken": rt, "_rtk": rtk, "channel": "renren"}
     url_data = urllib.urlencode(data)
     res = opener.open("http://shell.renren.com/"+uid+"/status", url_data)
