@@ -32,7 +32,11 @@ int main(int argc, char **argv)
     /* 创建“选项”菜单 */
     menubar_item = gtk_menu_item_new_with_label("选项");
     menu = gtk_menu_new();
-    menu_item = gtk_menu_item_new_with_label("设置");
+    menu_item = gtk_menu_item_new_with_label("设置邮件账户");
+    gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item); /* 注意添加相应回调函数 */
+    menu_item = gtk_menu_item_new_with_label("设置微信账户");
+    gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item); /* 注意添加相应回调函数 */
+    menu_item = gtk_menu_item_new_with_label("设置人人账户");
     gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item); /* 注意添加相应回调函数 */
     menu_item = gtk_separator_menu_item_new();
     gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item);
@@ -73,15 +77,15 @@ int main(int argc, char **argv)
     gtk_box_pack_start(GTK_BOX(vbox), scrolled_window,
                                         TRUE, TRUE, 0);
     /* 创建选项按钮 */
-    (*item).renren_button = gtk_check_button_new_with_label("人人网");
+    (*item).renren_button = gtk_check_button_new_with_label("群发邮件");
     gtk_widget_set_size_request(GTK_WIDGET((*item).renren_button), 100, 25);
     gtk_box_pack_start(GTK_BOX(hbox), (*item).renren_button,
                                        TRUE, TRUE, 0);
-    (*item).qzone_button = gtk_check_button_new_with_label("QQ空间");
-    gtk_widget_set_size_request(GTK_WIDGET((*item).qzone_button), 100, 25);
-    gtk_box_pack_start(GTK_BOX(hbox), (*item).qzone_button,
+    (*item).weixin_button = gtk_check_button_new_with_label("微信平台");
+    gtk_widget_set_size_request(GTK_WIDGET((*item).weixin_button), 100, 25);
+    gtk_box_pack_start(GTK_BOX(hbox), (*item).weixin_button,
                                        TRUE, TRUE, 0);
-    (*item).weibo_button = gtk_check_button_new_with_label("新浪微博");
+    (*item).weibo_button = gtk_check_button_new_with_label("人人网");
     gtk_widget_set_size_request(GTK_WIDGET((*item).weibo_button), 100, 25);
     gtk_box_pack_start(GTK_BOX(hbox), (*item).weibo_button,
                                        TRUE, TRUE, 0);
