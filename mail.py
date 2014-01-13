@@ -1,5 +1,6 @@
 #! /usr/bin/python2
 # Filename: mail.py
+# Come from: https://github.com/levisantony/python_email
 # Coding: utf-8
 
 from smtplib         import SMTP_SSL
@@ -24,7 +25,7 @@ classid    = ''
 #   'zzzzzz@gmail.com'
 # )
 receivers = (
-    '', 
+    '',
     ''
 )
 
