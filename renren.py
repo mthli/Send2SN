@@ -1,5 +1,6 @@
 #! /usr/bin/python2
 # Filename: renren.py
+# Come from: https://github.com/jsl9208/renrenStatus
 # Coding: utf-8
 
 import urllib
