@@ -2,5 +2,5 @@
 
 void mail_setting(GtkWidget *widget, gpointer parents)
 {
-    system("kwrite renren.py");
+    system("kwrite mail.py");
 }
