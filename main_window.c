@@ -59,10 +59,6 @@ int main(int argc, char **argv)
     menubar_item = gtk_menu_item_new_with_label("帮助");
     menu = gtk_menu_new();
     menu_item = gtk_menu_item_new_with_label("指南");
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item); /* 注意添加相应回调函数 */
-    menu_item = gtk_separator_menu_item_new();
-    gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item);
-    menu_item = gtk_menu_item_new_with_label("关于");
     g_signal_connect(G_OBJECT(menu_item), "activate", G_CALLBACK(about), main_window);
     gtk_menu_shell_append(GTK_MENU_SHELL(menu), menu_item);
     gtk_menu_item_set_submenu(GTK_MENU_ITEM(menubar_item), menu);
